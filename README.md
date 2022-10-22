@@ -12,8 +12,11 @@
 
 ### Creación Api Rest con NodeJs
 
-* Creación Archivo Configuración package.json :
+* 1.0) Creación Archivo Configuración package.json :
   * `npm init -y`
+
+ </br> 
+ 
 * Dependencias Iniciales : 
   * `npm i express` (Framework para el manejo de http, cli, etc)
   * `npm i express-handlebars` (Motor de Plantillas Backend)
@@ -36,6 +39,8 @@
   * `npm i -D @babel/preset-env` (Instalación dep. de desarrollo para el autoajuste sintáctico entre babel y js).
   * `npm i -D nodemon` (Instalación dep. de desarrollo para reinicio del módulo principal).
  
+  </br>
+ 
  * Configuración de Babel
    * `Dentro de `src` creamos archivo `.babelrc` (archivo para config de babel)
    *  Dentro de `.babelrc` añadimos la config del módulo principal de babel
@@ -47,12 +52,22 @@
       ]
      }
     ```
-
+   </br>
+ 
   * Importación de Express
     * Con express podemos ejecutar un servidor local. 
     * Una vez configurado babel podemos importar el módulo de express dentro de `index.js`
       ```js
       import express from "express";
       ```
+      
+     </br>
      
+   * Ejecución de Express
+    * Con express podemos ejecutar un servidor local. 
+    * Una vez configurado babel podemos importar el módulo de express dentro de `index.js`
+      ```js
+      import express from "express";
+      ```
+        
    
