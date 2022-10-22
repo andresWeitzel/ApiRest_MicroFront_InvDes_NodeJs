@@ -35,4 +35,20 @@
   * `npm i -D @babel/node` (Instalación dep. de desarrollo para el uso de babel junto con node)
   * `npm i -D @babel/preset-env` (Instalación dep. de desarrollo para el autoajuste sintáctico entre babel y js).
   * `npm i -D nodemon` (Instalación dep. de desarrollo para reinicio del módulo principal).
-  
+ 
+ * Configuración de Babel
+   * `Dentro de `src` creamos archivo `.babelrc` (archivo para config de babel)
+   *  Dentro de `.babelrc` añadimos la config del módulo principal de babel
+
+    ```js
+    {
+      "presets":[
+          "@babel/preset/env"
+      ]
+  }
+    ```
+
+  * Importación de Express
+    * Una vez configurado babel podemos importar el módulo de express dentro de `index.js`
+     
+   
