@@ -76,6 +76,19 @@
          app.listen(6000)
          console.log('Servidor en Ejecución en el Puerto ', 6000)
        ```
-      * Ejecutamos el archivo `index.js` con babel. Escribimos `npx babel-node scr/index.js`
+      * Seguidamente vamos a configurar la ejecución automática del index.js.. Dentro del `package.json` bloque `scripts`, colocamos lo siguiente..
+       ```js
+         "scripts": {
+              "start":"babel-node src/index.js"
+            },
+        ```
+      * Ejecutamos el archivo `index.js` con node. Escribimos `npm start`
+      * Salida Esperada
+        ```cmd
+           > apirest_invdes_nodejs@1.0.0 start
+           > babel-node src/index.js
+
+           Servidor en Ejecución en el Puerto  6000
+        ```
         
    
