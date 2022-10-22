@@ -125,7 +125,7 @@
       
      </br>
      
-    * 9.0) Configuración de gitignore
+   * 9.0) Configuración de gitignore
         * Vamos a excluir la carpeta `node_modules` para no añadir las librerías a nuestro repositorio.
         * Creamos el archivo `.gitignore` fuera de `src`
         * Dentro del mismo añadirmos `node_modules/`
