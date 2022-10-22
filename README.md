@@ -81,7 +81,7 @@
        
        ```js
          "scripts": {
-              "start":"nodemon src/index.js --ex babel-node"
+              "dev":"nodemon src/index.js --ex babel-node"
             },
         ```
       * Ejecutamos el archivo `index.js` con node. Escribimos `npm start`
