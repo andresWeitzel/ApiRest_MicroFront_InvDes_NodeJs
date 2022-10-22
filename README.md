@@ -11,14 +11,23 @@
 <hr>
 
 ### Creación Api Rest con NodeJs
+
 * Creación Archivo Configuración package.json :
   * `npm init -y`
 * Dependencias Iniciales : 
   * `npm i express` (Framework para el manejo de http, cli, etc)
   * `npm i express-handlebars` (Motor de Plantillas Backend)
   * `npm i mongoose` (Conexión y Modelamiento de datos)
+  
+</br>  
+
 * Creación del Código Fuente del Proyecto
   * Creamos carpeta `src`
   * Dentro de `src`, creamos archivo `index.js`
   * Dentro de `index.js` vamos a importar toda la config y librerías
   * Utilizaremos Babel para la compilación de la config
+* Instalación de Babel
+  * `npm i -D @babel/core` (Instalación dep. de desarrollo para el compilador de babel)
+  * `npm i -D @babel/cli` (Instalación dep. de desarrollo para cli de babel)
+  * `npm i -D @babel/node` (Instalación dep. de desarrollo para el uso de babel junto con node)
+  * `npm i -D @babel/preset-env` (Instalación dep. de desarrollo para el autoajuste sintáctico entre babel y js).
