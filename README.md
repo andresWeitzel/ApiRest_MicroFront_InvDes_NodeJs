@@ -49,7 +49,7 @@
     ```js
     {
       "presets":[
-          "@babel/preset/env"
+          "@babel/preset-env"
       ]
      }
     ```
@@ -64,12 +64,17 @@
       
      </br>
      
-   * 7.0) Ejecución de Express
-    * Con express podemos ejecutar un servidor local. 
-    * Las configuraciones del mismo las realizamos a través del objecto app invocando la función `express()`
-    
-      ```js
-      import express from "express";
-      ```
+   * 7.0) Configuración y Ejecución de Express
+     * Con express podemos ejecutar un servidor local. 
+     * Las configuraciones del mismo las realizamos a través del objecto app invocando la función `express()`
+
+       ```js
+       import express from "express";
+       const app = express()
+
+        app.listen(3000)
+        console.log('Servidor en Ejecución en el Puerto ', 3000)
+       ```
+      * Ejecutamos el archivo `index.js` con babel. Escribimos `npx babel-node scr/index.js`
         
    
