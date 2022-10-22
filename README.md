@@ -9,22 +9,22 @@
 
 
 <hr>
-
-### Creación Api Rest con NodeJs
+## Documentación Personal para Creación de Aplicaciones con el Stack MEAN
+### Creación Api Rest con NodeJs 
 
 * 1.0) Creación Archivo Configuración package.json :
   * `npm init -y`
 
  </br> 
  
-* Dependencias Iniciales : 
+* 2.0) Dependencias Iniciales : 
   * `npm i express` (Framework para el manejo de http, cli, etc)
   * `npm i express-handlebars` (Motor de Plantillas Backend)
   * `npm i mongoose` (Conexión y Modelamiento de datos)
   
 </br>  
 
-* Creación del Código Fuente del Proyecto
+* 3.0) Creación del Código Fuente del Proyecto
   * Creamos carpeta `src`
   * Dentro de `src`, creamos archivo `index.js`
   * Dentro de `index.js` vamos a importar toda la config y librerías
@@ -32,7 +32,7 @@
 
 </br> 
 
-* Instalación de Babel
+* 4.0) Instalación de Babel
   * `npm i -D @babel/core` (Instalación dep. de desarrollo para el compilador de babel)
   * `npm i -D @babel/cli` (Instalación dep. de desarrollo para cli de babel)
   * `npm i -D @babel/node` (Instalación dep. de desarrollo para el uso de babel junto con node)
@@ -41,7 +41,7 @@
  
   </br>
  
- * Configuración de Babel
+ * 5.0) Configuración de Babel
    * `Dentro de `src` creamos archivo `.babelrc` (archivo para config de babel)
    *  Dentro de `.babelrc` añadimos la config del módulo principal de babel
 
@@ -54,7 +54,7 @@
     ```
    </br>
  
-  * Importación de Express
+  * 6.0) Importación de Express
     * Con express podemos ejecutar un servidor local. 
     * Una vez configurado babel podemos importar el módulo de express dentro de `index.js`
       ```js
@@ -63,9 +63,10 @@
       
      </br>
      
-   * Ejecución de Express
+   * 7.0) Ejecución de Express
     * Con express podemos ejecutar un servidor local. 
-    * Una vez configurado babel podemos importar el módulo de express dentro de `index.js`
+    * Las configuraciones del mismo las realizamos a través del objecto app invocando la función `express()`
+    
       ```js
       import express from "express";
       ```
