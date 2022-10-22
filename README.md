@@ -31,3 +31,5 @@
   * `npm i -D @babel/cli` (Instalación dep. de desarrollo para cli de babel)
   * `npm i -D @babel/node` (Instalación dep. de desarrollo para el uso de babel junto con node)
   * `npm i -D @babel/preset-env` (Instalación dep. de desarrollo para el autoajuste sintáctico entre babel y js).
+  * `npm i -D nodemon` (Instalación dep. de desarrollo para reinicio del módulo principal).
+  
