@@ -69,11 +69,12 @@
      * Las configuraciones del mismo las realizamos a través del objecto app invocando la función `express()`
 
        ```js
-       import express from "express";
-       const app = express()
+        import express from "express";
 
-        app.listen(3000)
-        console.log('Servidor en Ejecución en el Puerto ', 3000)
+         const app = express()
+
+         app.listen(6000)
+         console.log('Servidor en Ejecución en el Puerto ', 6000)
        ```
       * Ejecutamos el archivo `index.js` con babel. Escribimos `npx babel-node scr/index.js`
         
