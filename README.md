@@ -81,7 +81,7 @@
        
        ```js
          "scripts": {
-              "dev":"nodemon src/index.js --ex babel-node"
+              "dev":"nodemon src/index.js --exec babel-node"
             },
         ```
       * Ejecutamos el archivo `index.js` con node. Escribimos `npm start`
@@ -101,7 +101,8 @@
        * Dentro del `index.js` configuramos el método get
         
         ```js
-           app.get('/hello', (req, res) =>{
-           }
+           app.get('/', (req, res) =>{
+               res.send('Hello World!!');
+             });
         ```       
    
