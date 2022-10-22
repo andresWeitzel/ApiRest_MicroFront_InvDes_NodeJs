@@ -11,7 +11,8 @@
 <hr>
 
 ### Creación Api Rest coon NodeJs
-* Creación Archivo Configuración package.json : npm init -y
+* Creación Archivo Configuración package.json :
+  * npm init -y
 * Dependencias Iniciales : 
   * npm i express
 
