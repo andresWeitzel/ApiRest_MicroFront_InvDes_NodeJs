@@ -129,11 +129,8 @@
         * Vamos a excluir la carpeta `node_modules` para no añadir las librerías a nuestro repositorio.
         * Creamos el archivo `.gitignore` fuera de `src`
         * Dentro del mismo añadirmos `node_modules/`
-        * Seguidamente en la consola colocamos los siguentes comandos
-        
-          ```git
-             git rm -r --cached .
-             git add .
-             git commit -m "remove gitignore files"
-             git push
-           ``` 
+        * Seguidamente en la consola colocamos los siguentes comandos (respetar punto final)
+         * `git rm -r --cached .`
+         * `git add .`
+         * `git commit -m "remove gitignore files"`
+         * `git push`
