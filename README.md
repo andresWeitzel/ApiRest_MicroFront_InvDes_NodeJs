@@ -18,5 +18,7 @@
   * `npm i express-handlebars` (Motor de Plantillas Backend)
   * `npm i mongoose` (Conexión y Modelamiento de datos)
 * Creación del Código Fuente del Proyecto
-  * New Folder-->Name : src
-  * Inside Folder --> New File --> Name: index.js
+  * Creamos carpeta `src`
+  * Dentro de `src`, creamos archivo `index.js`
+  * Dentro de `index.js` vamos a importar toda la config y librerías
+  * Utilizaremos Babel para la compilación de la config
