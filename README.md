@@ -12,7 +12,8 @@
 
 ### Creación Api Rest coon NodeJs
 * Creación Archivo Configuración package.json :
-  * npm init -y
+  * `npm init -y`
 * Dependencias Iniciales : 
-  * npm i express
-
+  * `npm i express` (Framework para el manejo de http, cli, etc)
+  * `npm i express-handlebars` (Motor de Plantillas Backend)
+  * `npm i mongoose` (Conexión y Modelamiento de datos)
