@@ -81,7 +81,8 @@
        
        ```js
          "scripts": {
-              "dev":"nodemon src/index.js --exec babel-node"
+               "start" : "nodemon src/index.js --exec babel-node",
+               "dev": "nodemon src/index.js --exec babel-node"
             },
         ```
       * Ejecutamos el archivo `index.js` con node. Escribimos `npm start`
@@ -104,5 +105,15 @@
            app.get('/', (req, res) =>{
                res.send('Hello World!!');
              });
-        ```       
-   
+        ```
+        
+        * Ejecutamos el archivo `index.js` con node. Escribimos `npm start`
+        * Salida Esperada
+
+          ```cmd
+             > apirest_invdes_nodejs@1.0.0 start
+             > babel-node src/index.js
+
+             Servidor en Ejecución en el Puerto  6000
+          ``` 
+
