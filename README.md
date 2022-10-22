@@ -43,7 +43,7 @@
   </br>
  
  * 5.0) Configuración de Babel
-   * `Dentro de `src` creamos archivo `.babelrc` (archivo para config de babel)
+   * `Fuera de `src` creamos el archivo `.babelrc` (archivo para config de babel)
    *  Dentro de `.babelrc` añadimos la config del módulo principal de babel
 
     ```js
@@ -79,7 +79,7 @@
       * Seguidamente vamos a configurar la ejecución automática del index.js.. Dentro del `package.json` bloque `scripts`, colocamos lo siguiente..
        ```js
          "scripts": {
-              "start":"babel-node src/index.js"
+              "start":"nodemon src/index.js"
             },
         ```
       * Ejecutamos el archivo `index.js` con node. Escribimos `npm start`
@@ -91,4 +91,13 @@
            Servidor en Ejecución en el Puerto  6000
         ```
         
+   </br>  
+    
+   * 8.0) Configuración Endpoint/Rutas 
+       * Vamos a configurar un msj de repuesta cuando accedamos a la ruta `/hello`
+       * Dentro del `index.js` configuramos el método get
+        ```js
+           app.get('/hello', (req, res) =>{
+           }
+        ```       
    
