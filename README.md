@@ -25,7 +25,10 @@
   * Creamos carpeta `src`
   * Dentro de `src`, creamos archivo `index.js`
   * Dentro de `index.js` vamos a importar toda la config y librerías
-  * Utilizaremos Babel para la compilación de la config
+  * Utilizaremos Babel para la compilación de la config.
+
+</br> 
+
 * Instalación de Babel
   * `npm i -D @babel/core` (Instalación dep. de desarrollo para el compilador de babel)
   * `npm i -D @babel/cli` (Instalación dep. de desarrollo para cli de babel)
