@@ -130,7 +130,7 @@
         * Creamos el archivo `.gitignore` fuera de `src`
         * Dentro del mismo añadirmos `node_modules/`
         * Seguidamente en la consola colocamos los siguentes comandos (respetar punto final)
-         * `git rm -r --cached .`
-         * `git add .`
-         * `git commit -m "remove gitignore files"`
-         * `git push`
+          * `git rm -r --cached .`
+          * `git add .`
+          * `git commit -m "remove gitignore files"`
+          * `git push`
