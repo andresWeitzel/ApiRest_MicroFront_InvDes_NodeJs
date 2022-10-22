@@ -10,7 +10,7 @@
 
 <hr>
 
-## Documentación Personal para Creación de Aplicaciones con el Stack MEAN
+## Documentación Personal para la Creación de Aplicaciones Web con el Stack MEAN
 ### Creación Api Rest con NodeJs 
 
 * 1.0) Creación Archivo Configuración package.json :
