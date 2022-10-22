@@ -10,10 +10,13 @@
 
 <hr>
 
-### Creación Api Rest coon NodeJs
+### Creación Api Rest con NodeJs
 * Creación Archivo Configuración package.json :
   * `npm init -y`
 * Dependencias Iniciales : 
   * `npm i express` (Framework para el manejo de http, cli, etc)
   * `npm i express-handlebars` (Motor de Plantillas Backend)
   * `npm i mongoose` (Conexión y Modelamiento de datos)
+* Creación del Código Fuente del Proyecto
+  * New Folder-->Name : src
+  * Inside Folder --> New File --> Name: index.js
