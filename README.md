@@ -111,9 +111,15 @@
         * Salida Esperada
 
           ```cmd
-             > apirest_invdes_nodejs@1.0.0 start
-             > babel-node src/index.js
+            > apirest_invdes_nodejs@1.0.0 start
+            > nodemon src/index.js --exec babel-node
 
-             Servidor en Ejecución en el Puerto  6000
+            [nodemon] 2.0.20
+            [nodemon] to restart at any time, enter `rs`
+            [nodemon] watching path(s): *.*
+            [nodemon] watching extensions: js,mjs,json
+            [nodemon] starting `babel-node src/index.js`
+            Servidor en Ejecución en el Puerto  3100
           ``` 
+        * Accedemos al endpoint configurado `localhost:3100` y vemos el msj generado `Hello Wordl!!`  
 
