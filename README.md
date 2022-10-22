@@ -121,5 +121,19 @@
             [nodemon] starting `babel-node src/index.js`
             Servidor en Ejecución en el Puerto  3100
           ``` 
-        * Accedemos al endpoint configurado `localhost:3100` y vemos el msj generado `Hello Wordl!!`  
-
+        * Accedemos al endpoint configurado `localhost:3100` y vemos el msj generado `Hello Wordl!!`
+      
+     </br>
+     
+    * 9.0) Configuración de gitignore
+        * Vamos a excluir la carpeta `node_modules` para no añadir las librerías a nuestro repositorio.
+        * Creamos el archivo `.gitignore` fuera de `src`
+        * Dentro del mismo añadirmos `node_modules/`
+        * Seguidamente en la consola colocamos los siguentes comandos
+        
+          ```git
+             git rm -r --cached .
+             git add .
+             git commit -m "remove gitignore files"
+             git push
+           ``` 
