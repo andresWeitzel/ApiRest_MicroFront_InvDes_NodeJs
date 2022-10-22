@@ -45,10 +45,14 @@
       "presets":[
           "@babel/preset/env"
       ]
-  }
+     }
     ```
 
   * Importación de Express
+    * Con express podemos ejecutar un servidor local. 
     * Una vez configurado babel podemos importar el módulo de express dentro de `index.js`
+      ```js
+      import express from "express";
+      ```
      
    
