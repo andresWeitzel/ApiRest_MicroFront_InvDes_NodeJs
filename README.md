@@ -10,7 +10,7 @@
 
 <hr>
 
-## Documentación Personal para la Creación de Aplicaciones Web con el Stack MEAN
+## Documentación Inicial para la Configuración y Creación de Aplicaciones Web con el Stack MEAN
 ### Creación Api Rest con NodeJs 
 
 #### 1.0) Creación Archivo Configuración package.json 
@@ -136,8 +136,98 @@
                [nodemon] starting `babel-node src/index.js`
                Servidor en Ejecución en el Puerto  3100
      ``` 
-   * Accedemos al endpoint configurado `localhost:3100` y vemos el msj generado `Hello Wordl!!`  
+   * Accedemos al endpoint configurado `localhost:3100` y vemos el msj generado `Hello Wordl!!`
+   * Posteriormente el msg podrá ser reemplazado por cualquier archivo html  
 
+</br>
+     
+#### 9.0) Motor de Plantillas Handlebars
+   * Para servir archivos html con node tendremos que configurar dicho motor
+   * Primeramente crearemos la carpeta `views` dentro de src
+   * Dentro de `views` crearemos otra carpeta llamada `layouts` y dentro de esta un primer archivo html con extensión handlebars `main.hbs`
+   * Trabajando con layoutsDir todo el render principal se realiza a través del main... podemos realizar componentes de html y llevarlos al main.hbs para no tener redundancia de código.
+   
+     ```hbs
+              <!DOCTYPE html>
+              <html lang="en">
+              <head>
+                  <meta charset="UTF-8">
+                  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Document</title>
+              </head>
+              <body>
+                  <h1>Hello World!!</h1>
+              </body>
+              </html>
+     ```
+     
+   * Vamos a configurar dicho motor en `app.js`
+   * Realizamos las configuraciones de rutas y vistas con el módulo path
+   * Realizamos las importaciones y declaraciones del motor con .engine
+     ```hbs
+            import express from "express";
+            import routes from './routes/index.routes';
+            import path from 'path';
+            import { create } from 'express-handlebars';
+
+
+            const app = express()
+
+            //Views
+            app.set("views" , path.join(__dirname , "/views"));
+
+            //Handlebars Config
+            var hbs = create({
+                layoutsDir: path.join(app.get("views"), "layouts"),
+                defaultLayout: "main",
+                extname: ".hbs",
+            })
+            //Handlebars invoke
+            app.engine(".hbs", hbs.engine);
+
+            //Handlebar set
+            app.set("view engine",".hbs");
+
+            //Routes
+            app.use(routes);
+
+            export default app;
+
+     ```
+   * Por último configuramos el routing desde `index.routes.js`
+   * Una vaz configurados los pasos anteriores no es necesario la config del `main.hbs` ya que todos los snippets de codigo se van a renderizar una vez levantada la app (sería como un index.html).
+   * Creamos 
+     ```hbs
+            import express from "express";
+            import routes from './routes/index.routes';
+            import path from 'path';
+            import { create } from 'express-handlebars';
+
+
+            const app = express()
+
+            //Views
+            app.set("views" , path.join(__dirname , "/views"));
+
+            //Handlebars Config
+            var hbs = create({
+                layoutsDir: path.join(app.get("views"), "layouts"),
+                defaultLayout: "main",
+                extname: ".hbs",
+            })
+            //Handlebars invoke
+            app.engine(".hbs", hbs.engine);
+
+            //Handlebar set
+            app.set("view engine",".hbs");
+
+            //Routes
+            app.use(routes);
+
+            export default app;
+
+     ``` 
         
 
  <hr>
