@@ -145,24 +145,80 @@
    * Para servir archivos html con node tendremos que configurar dicho motor
    * Primeramente crearemos la carpeta `views` dentro de src
    * Dentro de `views` crearemos otra carpeta llamada `layouts` y dentro de esta un primer archivo html con extensión handlebars `main.hbs`
-   * Trabajando con layoutsDir todo el render principal se realiza a través del main... podemos realizar componentes de html y llevarlos al main.hbs para no tener redundancia de código.
+   * Trabajando con layoutsDir y dicho archivo todo el render del resto de los archivos html se realiza a través del main... podemos realizar componentes de html y llevarlos al main.hbs para no tener redundancia de código.Esto lo hacemos con la interpolación `{{{body}}}`
    
      ```hbs
-              <!DOCTYPE html>
+             <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>MicroFront I+D</title>
+            </head>
+            <body>
+            {{{body}}}
+            </body>
+            </html>
+     ```
+   * Crearemos otros dos archivos html `fuera` de la carpeta `layout`. Estos serán los componentes que se invocaran a través del routing y se renderizarán a través del `main.hbs`.
+   * Creamos about.hbs e index.hbs.
+   * Para el index.hbs tenemos..
+       ```hbs
+             <!DOCTYPE html>
               <html lang="en">
               <head>
                   <meta charset="UTF-8">
                   <meta http-equiv="X-UA-Compatible" content="IE=edge">
                   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                  <title>Document</title>
+                  <title>MicroFront I+D</title>
               </head>
               <body>
-                  <h1>Hello World!!</h1>
+                  <h1>INDEX</h1>
               </body>
               </html>
      ```
+   * Para el about.hbs tenemos..
+       ```hbs
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>MicroFront I+D</title>
+            </head>
+            <body>
+
+                <h1>ABOUT</h1>
+
+            </body>
+            </html>
+     ```
+   * Seguidamente configuramos el routing desde `index.routes.js`
+   * Una vaz configurados los pasos anteriores no es necesario la config del `main.hbs` en el archivo routing ya que todos los snippets de codigo se van a renderizar una vez levantada la app .
+   * Modificamos el archivo
+     ```hbs
+          import {Router} from 'express';
+
+
+          const router = Router();
+
+          router.get('/', (req, res) =>{
+              res.render('index');
+          });
+
+          router.get('/about', (req, res) =>{
+              res.render('about');
+          });
+
+
+          export default router;
+
+     ```  
      
-   * Vamos a configurar dicho motor en `app.js`
+     
+   * Seguidamente vamos a configurar dicho motor de plantillas en `app.js`
    * Realizamos las configuraciones de rutas y vistas con el módulo path
    * Realizamos las importaciones y declaraciones del motor con .engine
      ```hbs
@@ -195,24 +251,11 @@
             export default app;
 
      ```
-   * Por último configuramos el routing desde `index.routes.js`
-   * Una vaz configurados los pasos anteriores no es necesario la config del `main.hbs` en el archivo routing ya que todos los snippets de codigo se van a renderizar una vez levantada la app (sería como un index.html).
-   * Modificamos el archivo
-     ```hbs
-          import {Router} from 'express';
 
-          const router = Router();
-
-          router.get('/', (req, res) =>{
-              res.render('index');
-          });
-
-
-          export default router;
-
-     ```
      
-  * Levantamos el server y visualizamos el Hello World    
+  * Levantamos el server y visualizamos.. 
+  * INDEX para http://localhost:3100/
+  * ABOUT para http://localhost:3100/about
         
 
  <hr>
