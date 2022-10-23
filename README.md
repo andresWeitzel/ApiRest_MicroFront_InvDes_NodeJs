@@ -42,9 +42,9 @@
  
   </br>
  
- * 5.0) Configuración de Babel
-   * `Fuera de `src` creamos el archivo `.babelrc` (archivo para config de babel)
-   *  Dentro de `.babelrc` añadimos la config del módulo principal de babel
+* 5.0) Configuración de Babel
+  * `Fuera de `src` creamos el archivo `.babelrc` (archivo para config de babel)
+  * Dentro de `.babelrc` añadimos la config del módulo principal de babel
 
     ```js
     {
@@ -55,13 +55,13 @@
     ```
       </br>  
     
-    * 6.0) Configuración de Routing
-        * El enrutamiento se refiere a cómo los extremos (URI) de una aplicación responden a las solicitudes del cliente.
-        * Dentro de `src` creamos la carpeta `routes`.
-        * Dentro de `routes` creamos el archivo `index.routes.js`
-        * Importamos Router para crear un enrutador y configuramos los endpoints
+* 6.0) Configuración de Routing
+   * El enrutamiento se refiere a cómo los extremos (URI) de una aplicación responden a las solicitudes del cliente.
+   * Dentro de `src` creamos la carpeta `routes`.
+   * Dentro de `routes` creamos el archivo `index.routes.js`
+   * Importamos Router para crear un enrutador y configuramos los endpoints
         
-        ```js
+    ```js
             import {Router} from 'express';
 
             const router = Router();
@@ -72,14 +72,12 @@
 
 
             export default router;
-          ```
+       ```
 
-    
-    
     
    </br>
  
-  * 7.0) Importación de Express
+* 7.0) Importación de Express
     * Con express podemos ejecutar un servidor local. 
     * Una vez configurado babel podemos importar el módulo de express dentro de `index.js`
     
@@ -89,7 +87,7 @@
       
      </br>
      
-   * 8.0) Configuración y Ejecución de Express
+ * 8.0) Configuración y Ejecución de Express
      * Con express podemos ejecutar un servidor local.
      * Las configuraciones del mismo las realizamos en el archivo `index.js` a través del objecto app invocando la función `express()`
      * Seguidamente utilizamos el routing establecido
@@ -108,7 +106,7 @@
        console.log('Servidor en Ejecución en el Puerto ', 3100)
 
        ```
-      * Seguidamente vamos a configurar la ejecución automática del index.js.. Dentro del `package.json` bloque `scripts`, colocamos lo siguiente..
+    * Seguidamente vamos a configurar la ejecución automática del index.js.. Dentro del `package.json` bloque `scripts`, colocamos lo siguiente..
        
        ```js
          "scripts": {
@@ -116,8 +114,8 @@
                "dev": "nodemon src/index.js --exec babel-node"
             },
         ```
-      * Ejecutamos el archivo `index.js` con node. Escribimos `npm start`
-      * Salida Esperada:
+    * Ejecutamos el archivo `index.js` con node. Escribimos `npm start`
+    * Salida Esperada:
       
           ```cmd
             > apirest_invdes_nodejs@1.0.0 start
@@ -130,13 +128,14 @@
             [nodemon] starting `babel-node src/index.js`
             Servidor en Ejecución en el Puerto  3100
           ``` 
-        * Accedemos al endpoint configurado `localhost:3100` y vemos el msj generado `Hello Wordl!!`  
+   * Accedemos al endpoint configurado `localhost:3100` y vemos el msj generado `Hello Wordl!!`  
            
         
 
- </hr>
+ <hr>
+ 
 
-  #### Configuración de gitignore
+#### Configuración de gitignore
         * Vamos a excluir la carpeta `node_modules` para no añadir las librerías a nuestro repositorio.
         * Creamos el archivo `.gitignore` fuera de `src`
         * Dentro del mismo añadirmos `node_modules/`
@@ -148,6 +147,6 @@
  
    </br>
  
- #### Extensiones Visual Studio Code
+#### Extensiones Visual Studio Code
   * Prettier - Code formatter
   * Material Icon
