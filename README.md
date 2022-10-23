@@ -196,38 +196,23 @@
 
      ```
    * Por último configuramos el routing desde `index.routes.js`
-   * Una vaz configurados los pasos anteriores no es necesario la config del `main.hbs` ya que todos los snippets de codigo se van a renderizar una vez levantada la app (sería como un index.html).
-   * Creamos 
+   * Una vaz configurados los pasos anteriores no es necesario la config del `main.hbs` en el archivo routing ya que todos los snippets de codigo se van a renderizar una vez levantada la app (sería como un index.html).
+   * Modificamos el archivo
      ```hbs
-            import express from "express";
-            import routes from './routes/index.routes';
-            import path from 'path';
-            import { create } from 'express-handlebars';
+          import {Router} from 'express';
+
+          const router = Router();
+
+          router.get('/', (req, res) =>{
+              res.render('index');
+          });
 
 
-            const app = express()
+          export default router;
 
-            //Views
-            app.set("views" , path.join(__dirname , "/views"));
-
-            //Handlebars Config
-            var hbs = create({
-                layoutsDir: path.join(app.get("views"), "layouts"),
-                defaultLayout: "main",
-                extname: ".hbs",
-            })
-            //Handlebars invoke
-            app.engine(".hbs", hbs.engine);
-
-            //Handlebar set
-            app.set("view engine",".hbs");
-
-            //Routes
-            app.use(routes);
-
-            export default app;
-
-     ``` 
+     ```
+     
+  * Levantamos el server y visualizamos el Hello World    
         
 
  <hr>
