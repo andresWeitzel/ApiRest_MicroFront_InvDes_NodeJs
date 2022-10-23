@@ -147,7 +147,7 @@
    * Dentro de `views` crearemos otra carpeta llamada `layouts` y dentro de esta un primer archivo html con extensión handlebars `main.hbs`
    * Trabajando con layoutsDir y dicho archivo todo el render del resto de los archivos html se realiza a través del main... podemos realizar componentes de html y llevarlos al main.hbs para no tener redundancia de código.Esto lo hacemos con la interpolación `{{{body}}}`
    
-     ```hbs
+     ```html
              <!DOCTYPE html>
             <html lang="en">
             <head>
@@ -164,7 +164,8 @@
    * Crearemos otros dos archivos html `fuera` de la carpeta `layout`. Estos serán los componentes que se invocaran a través del routing y se renderizarán a través del `main.hbs`.
    * Creamos about.hbs e index.hbs.
    * Para el index.hbs tenemos..
-       ```hbs
+   
+       ```html
              <!DOCTYPE html>
               <html lang="en">
               <head>
@@ -178,8 +179,10 @@
               </body>
               </html>
      ```
+     
    * Para el about.hbs tenemos..
-       ```hbs
+       
+       ```html
             <!DOCTYPE html>
             <html lang="en">
             <head>
@@ -195,10 +198,12 @@
             </body>
             </html>
      ```
+     
    * Seguidamente configuramos el routing desde `index.routes.js`
    * Una vaz configurados los pasos anteriores no es necesario la config del `main.hbs` en el archivo routing ya que todos los snippets de codigo se van a renderizar una vez levantada la app .
    * Modificamos el archivo
-     ```hbs
+     
+     ```js
           import {Router} from 'express';
 
 
@@ -221,7 +226,8 @@
    * Seguidamente vamos a configurar dicho motor de plantillas en `app.js`
    * Realizamos las configuraciones de rutas y vistas con el módulo path
    * Realizamos las importaciones y declaraciones del motor con .engine
-     ```hbs
+     
+     ```js
             import express from "express";
             import routes from './routes/index.routes';
             import path from 'path';
