@@ -45,13 +45,13 @@
 #### 5.0) Configuración de Babel
    * `Fuera de `src` creamos el archivo `.babelrc` (archivo para config de babel)
    * Dentro de `.babelrc` añadimos la config del módulo principal de babel
-      ```js
+   ```js
          {
            "presets":[
                "@babel/preset-env"
            ]
           }
-         ```
+   ```
    
 </br>  
     
@@ -61,7 +61,7 @@
    * Dentro de `routes` creamos el archivo `index.routes.js`
    * Importamos Router para crear un enrutador y configuramos los endpoints
 
-        ```js
+   ```js
                 import {Router} from 'express';
 
                 const router = Router();
@@ -72,7 +72,7 @@
 
 
                 export default router;
-           ```
+   ```
 
     
 </br>
@@ -82,9 +82,9 @@
    * Con express podemos ejecutar un servidor local. 
    * Una vez configurado babel podemos importar el módulo de express dentro de `index.js`
 
-         ```js
+   ```js
          import express from "express";
-         ```
+   ```
 
 </br>
      
@@ -93,7 +93,7 @@
    * Las configuraciones del mismo las realizamos en el archivo `index.js` a través del objecto app invocando la función `express()`
    * Seguidamente utilizamos el routing establecido
 
-          ```js
+    ```js
           import express from "express";
           import routes from './routes/index.routes'
 
@@ -106,19 +106,19 @@
           app.listen(3100)
           console.log('Servidor en Ejecución en el Puerto ', 3100)
 
-          ```
+    ```
    * Seguidamente vamos a configurar la ejecución automática del index.js.. Dentro del `package.json` bloque `scripts`, colocamos lo siguiente..
 
-          ```js
+     ```js
             "scripts": {
                   "start" : "nodemon src/index.js --exec babel-node",
                   "dev": "nodemon src/index.js --exec babel-node"
                },
-           ```
+      ```
    * Ejecutamos el archivo `index.js` con node. Escribimos `npm start`
    * Salida Esperada:
 
-             ```cmd
+     ```cmd
                > apirest_invdes_nodejs@1.0.0 start
                > nodemon src/index.js --exec babel-node
 
@@ -128,7 +128,7 @@
                [nodemon] watching extensions: js,mjs,json
                [nodemon] starting `babel-node src/index.js`
                Servidor en Ejecución en el Puerto  3100
-             ``` 
+     ``` 
    * Accedemos al endpoint configurado `localhost:3100` y vemos el msj generado `Hello Wordl!!`  
 
         
