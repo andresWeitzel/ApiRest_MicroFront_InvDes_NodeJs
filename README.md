@@ -27,8 +27,8 @@
 
 #### 3.0) Creación del Código Fuente del Proyecto
    * Creamos carpeta `src`
-   * Dentro de `src`, creamos archivo `index.js`
-   * Dentro de `index.js` vamos a importar toda la config y librerías
+   * Dentro de `src`, creamos archivo `app.js` (en este archivo estarán las configs de la aplicación)
+   * Dentro de `app.js` vamos a importar toda la config y librerías
    * Utilizaremos Babel para la compilación de la config.
 
 </br> 
@@ -72,7 +72,8 @@
 
 
                 export default router;
-     ```
+      ```
+
 
     
 </br>
@@ -80,7 +81,7 @@
 
 #### 7.0) Importación de Express
    * Con express podemos ejecutar un servidor local. 
-   * Una vez configurado babel podemos importar el módulo de express dentro de `index.js`
+   * Una vez configurado babel podemos importar el módulo de express dentro de `app.js`
 
      ```js
          import express from "express";
@@ -90,7 +91,7 @@
      
  #### 8.0) Configuración y Ejecución de Express
    * Con express podemos ejecutar un servidor local.
-   * Las configuraciones del mismo las realizamos en el archivo `index.js` a través del objecto app invocando la función `express()`
+   * Las configuraciones del mismo las realizamos en el archivo `app.js` a través del objecto app invocando la función `express()`
    * Seguidamente utilizamos el routing establecido
 
       ```js
@@ -102,12 +103,18 @@
 
           app.use(routes);
 
+          export default app;
+
+      ```
+   * Ahora creamos el archivo `index.js` que contendrá la config final de la aplicación.. 
+     ```js
+          import app from "./app"
 
           app.listen(3100)
           console.log('Servidor en Ejecución en el Puerto ', 3100)
 
-      ```
-   * Seguidamente vamos a configurar la ejecución automática del index.js.. Dentro del `package.json` bloque `scripts`, colocamos lo siguiente..
+     ```   
+   * Seguidamente vamos a configurar la ejecución automática de la aplicación.. Dentro del `package.json` bloque `scripts`, colocamos lo siguiente..
 
       ```js
             "scripts": {
