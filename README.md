@@ -270,9 +270,9 @@
 </br>
      
 #### 10.0) Configuración db con mongoose
-    * Dentro de `src` creamos el archivo de config llamado `database.js`
-    * Creamos un obj conexión indicando el nombre de la db 
-    ```js
+  * Dentro de `src` creamos el archivo de config llamado `database.js`
+  * Creamos un obj conexión indicando el nombre de la db 
+   ```js
     import {connect} from 'mongoose';
 
       (async ()=>{
@@ -291,19 +291,19 @@
 
     ```
     
-    * Seguidamente importamos dicha config en el `index.js`
+  * Seguidamente importamos dicha config en el `index.js`
     
-     ```js
+   ```js
       import app from "./app"
       import './database'
 
 
       app.listen(3100)
       console.log('Servidor en Ejecución en el Puerto ', 3100)
-     ```
-    * Deberíamos tener una respuesta similar a ...
+   ```
+  * Deberíamos tener una respuesta similar a ...
     
-    ```cmd
+   ```cmd
     [nodemon] restarting due to changes...
     [nodemon] restarting due to changes...
     [nodemon] starting `babel-node src/index.js`
