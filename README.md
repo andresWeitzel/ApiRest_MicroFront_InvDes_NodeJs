@@ -146,6 +146,9 @@
    * Primeramente crearemos la carpeta `views` dentro de src
    * Dentro de `views` crearemos otra carpeta llamada `layouts` y dentro de esta un primer archivo html con extensión handlebars `main.hbs`
    * Trabajando con layoutsDir y dicho archivo todo el render del resto de los archivos html se realiza a través del main... podemos realizar componentes de html y llevarlos al main.hbs para no tener redundancia de código.Esto lo hacemos con la interpolación `{{{body}}}`
+   * Podemos modularizar el código de `main.hbs` trabajando con `partials`. Esto nos permite llevar el código de navbar, footer, etc a archivos separados.
+   * Dentro de `views` creamos una carpeta llamada `partials` y allí tantas carpetas como componentes deseamos (carpeta navbar, carpeta footer, etc).
+   * Dentro del `main.hbs` añadimos las rutas para dichos componentes `{{>navbar/navbar}}` . Por cada componente mismo caso.
    
      ```html
              <!DOCTYPE html>
@@ -157,6 +160,7 @@
                 <title>MicroFront I+D</title>
             </head>
             <body>
+            {{>navbar/navbar}}   
             {{{body}}}
             </body>
             </html>
@@ -262,9 +266,57 @@
   * Levantamos el server y visualizamos.. 
   * INDEX para http://localhost:3100/
   * ABOUT para http://localhost:3100/about
-        
 
- <hr>
+</br>
+     
+#### 10.0) Configuración db con mongoose
+    * Dentro de `src` creamos el archivo de config llamado `database.js`
+    * Creamos un obj conexión indicando el nombre de la db 
+    ```js
+    import {connect} from 'mongoose';
+
+      (async ()=>{
+      try {
+
+          const db = await connect("mongodb://localhost/db_dataset_investigacion_desarrollo")
+
+          console.log('== SE HA ESTABLECIDO LA CONEXIÓN DE LA DB ',db.connection.name,' CORRECTAMENTE ==')
+
+
+      } catch (error) {
+          console.log(error)
+      }
+
+      })()
+
+    ```
+    
+    * Seguidamente importamos dicha config en el `index.js`
+    
+     ```js
+      import app from "./app"
+      import './database'
+
+
+      app.listen(3100)
+      console.log('Servidor en Ejecución en el Puerto ', 3100)
+     ```
+    * Deberíamos tener una respuesta similar a ...
+    
+    ```cmd
+    [nodemon] restarting due to changes...
+    [nodemon] restarting due to changes...
+    [nodemon] starting `babel-node src/index.js`
+    Servidor en Ejecución en el Puerto  3100
+    == SE HA ESTABLECIDO LA CONEXIÓN DE LA DB  db_dataset_investigacion_desarrollo  CORRECTAMENTE ==
+    ```
+</br>
+
+### `DOCUMENTACIÓN EN PROCESO DE DESARROLLO`
+
+
+
+<hr>
  
 
 #### Configuración de gitignore
