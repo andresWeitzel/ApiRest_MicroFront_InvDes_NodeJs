@@ -272,47 +272,48 @@
 #### 10.0) Configuración db con mongoose
   * Dentro de `src` creamos el archivo de config llamado `database.js`
   * Creamos un obj conexión indicando el nombre de la db 
-   ```js
-    import {connect} from 'mongoose';
+     ```js
+      import {connect} from 'mongoose';
 
-      (async ()=>{
-      try {
+        (async ()=>{
+        try {
 
-          const db = await connect("mongodb://localhost/db_dataset_investigacion_desarrollo")
+            const db = await connect("mongodb://localhost/db_dataset_investigacion_desarrollo")
 
-          console.log('== SE HA ESTABLECIDO LA CONEXIÓN DE LA DB ',db.connection.name,' CORRECTAMENTE ==')
+            console.log('== SE HA ESTABLECIDO LA CONEXIÓN DE LA DB ',db.connection.name,' CORRECTAMENTE ==')
 
 
-      } catch (error) {
-          console.log(error)
-      }
+        } catch (error) {
+            console.log(error)
+        }
 
-      })()
+        })()
 
-    ```
+     ```
     
   * Seguidamente importamos dicha config en el `index.js`
     
-   ```js
-      import app from "./app"
-      import './database'
+     ```js
+        import app from "./app"
+        import './database'
 
 
-      app.listen(3100)
-      console.log('Servidor en Ejecución en el Puerto ', 3100)
-   ```
+        app.listen(3100)
+        console.log('Servidor en Ejecución en el Puerto ', 3100)
+     ```
   * Deberíamos tener una respuesta similar a ...
     
-   ```cmd
-    [nodemon] restarting due to changes...
-    [nodemon] restarting due to changes...
-    [nodemon] starting `babel-node src/index.js`
-    Servidor en Ejecución en el Puerto  3100
-    == SE HA ESTABLECIDO LA CONEXIÓN DE LA DB  db_dataset_investigacion_desarrollo  CORRECTAMENTE ==
-    ```
+     ```cmd
+      [nodemon] restarting due to changes...
+      [nodemon] restarting due to changes...
+      [nodemon] starting `babel-node src/index.js`
+      Servidor en Ejecución en el Puerto  3100
+      == SE HA ESTABLECIDO LA CONEXIÓN DE LA DB  db_dataset_investigacion_desarrollo  CORRECTAMENTE ==
+     ```
+     
 </br>
 
-### `DOCUMENTACIÓN EN PROCESO DE DESARROLLO`
+## `DOCUMENTACIÓN EN PROCESO DE DESARROLLO`
 
 
 
