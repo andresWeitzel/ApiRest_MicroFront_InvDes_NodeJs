@@ -1,6 +1,6 @@
 # AppWeb_MicroFront_InvDes_NodeJs (En Desarrollo).
 
-* App Web Micro FrontEnd de Proyectos I+D Nacionales implementando NodeJs, Express, Handlebars, Bootstrap, Highchart, Git, MongoDB y Otras Tecnologías.
+* App Web Micro FrontEnd de Proyectos I+D Nacionales implementando NodeJs, Express, Nodemon, Handlebars, Bootstrap, Highchart, Git, MongoDB y Otras Tecnologías.
 
 </br>
 
